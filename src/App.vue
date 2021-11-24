@@ -1,16 +1,28 @@
 <template>
   <div id="app">
+    <!-- componente Header  -->
     <Header/>
+
+    <main>
+      <!-- componente Conent  -->
+      <Content/>
+    </main>
+
+    <footer>
+      <!-- componente Footer  -->
+    </footer>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue';
+import Content from './components/Content.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
+    Content
   }
 }
 </script>
@@ -29,5 +41,10 @@ export default {
   // text-align: center;
   // color: #2c3e50;
   // margin-top: 60px;
+}
+
+main {
+  padding: 40px 0;
+  background-color: rgba(28,28,28,255);
 }
 </style>
