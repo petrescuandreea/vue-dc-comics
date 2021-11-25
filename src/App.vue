@@ -5,7 +5,7 @@
 
     <main>
       <!-- componente Conent  -->
-      <Content/>
+      <ComicSeries/>
     </main>
 
     <footer>
@@ -17,14 +17,14 @@
 
 <script>
 import Header from './components/Header.vue';
-import Content from './components/Content.vue';
+import ComicSeries from './components/ComicSeries.vue';
 import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Content,
+    ComicSeries,
     Footer
   }
 }
@@ -41,13 +41,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // text-align: center;
-  // color: #2c3e50;
-  // margin-top: 60px;
 }
 
-main {
-  padding: 40px 0;
-  background-color: rgba(28,28,28,255);
-}
+
 </style>
