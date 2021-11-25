@@ -208,6 +208,10 @@ export default {
                             color: #5c5c5c;
                             font-size: 10px;
                             text-decoration: none;
+
+                            &:hover {
+                                color: #0282F9;
+                            }
                         }
                     }
 
