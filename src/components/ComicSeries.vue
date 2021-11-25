@@ -129,7 +129,6 @@ export default {
             .title-wrapper {
                 text-transform: uppercase;
                 padding: 10px 25px;
-                background-color: rgba(2,130,249,255);
                 position: absolute;
                 top: -45px;
             }
@@ -142,7 +141,6 @@ export default {
                 .btn-load-more {
                     width: 20%;
                     text-transform: uppercase;
-                    background-color: rgba(2,130,249,255);
                     padding: 10px 40px;
                     display: inline-block;
                     cursor: pointer;

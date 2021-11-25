@@ -105,10 +105,6 @@ export default {
           font-size: 10px;
           font-weight: bold;
           padding: 48px 5px;
-          &.active, &:hover {
-              border-bottom: 4px solid rgba(2,130,249,255);
-              color: rgba(2,130,249,255);
-          }
         }
       }
     }
