@@ -1,13 +1,15 @@
 <template>
     <section id="footer-up">
         <div class="container-center">
-            <div v-for="item, i in footerNav" :key="i" class="card">
-                <div class="card-content">
-                    <img :src="require(`../assets/img/${item.image}`)" :alt="item.text">
-                    <span>{{ item.text }}</span>
-                </div>
-                
-            </div>
+                <nav>
+                    <ul>
+                        <li v-for="item, i in footerNav" :key="i">
+                            <a :href="item.url">
+                                <img :src="require(`../assets/img/${item.image}`)" :alt="item.text">{{ item.text }}
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
         </div>
     </section>
 </template>
@@ -19,22 +21,27 @@ export default {
       return {
           footerNav: [
               {
+                  url: '#',
                   image:'buy-comics-digital-comics.png',
                   text:'DIGITAL COMICS'
               },
               {
+                  url: '#',
                   image:'buy-comics-merchandise.png',
                   text:'DC MERCHANDISE'
               },
               {
+                  url: '#',
                   image:'buy-comics-subscriptions.png',
                   text:'SUBSCRIPTION'
               },
               {
+                  url: '#',
                   image:'buy-comics-shop-locator.png',
                   text:'COMIC SHOP LOCATOR'
               },
               {
+                  url: '#',
                   image:'buy-dc-power-visa.svg',
                   text:'DC POWER VISA'
               }
@@ -47,35 +54,36 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     #footer-up {
-        height: 130px;
+        padding: 55px 0;
         background-color: rgba(2,130,249,255);
-        display: flex;
 
         .container-center {
         width: 75%;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-evenly;
 
-            .card {
+            ul{
                 display: flex;
-                align-items: center;
+                justify-content: space-evenly;
 
-                .card-content {
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
+                li{
+                    display: inline-block;
+                    margin-right: 25px;
 
-                    img {
-                    max-width: 35px;
-                    max-height: 35px;
-                    margin-right: 5px;
-                    }
-
-                    span {
-                        font-size: 12px;
+                    a {
+                        font-size: 14px;
                         color: white;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            
+                            height: 50px;
+                            margin-right: 10px;
+                        }
                     }
+
+
                 }
             }
         }
