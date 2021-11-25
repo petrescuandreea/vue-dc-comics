@@ -46,6 +46,31 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  $brand_primary: #0282f9;
+
+  header{
+    a{
+      &.active, &:hover{
+          border-bottom: 4px solid $brand_primary;
+          color: $brand_primary;
+      }
+    }
+  }
+
+  section {
+    .title-wrapper {
+      background-color: $brand_primary;
+    }
+
+    .btn-container {
+      .btn-load-more {
+        background-color: $brand_primary;
+      }
+    }
+  }
+
+    
 }
 
 
