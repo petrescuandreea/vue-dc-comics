@@ -16,103 +16,42 @@
            <div class="container-center">
                <div id="footer-nav">
                    <div id="dc-comics-shop-nav">
-                       <h3>DC COMICS</h3>
                        <nav>
                            <ul>
-                               <li>
-                                   <a href="#">Characters</a>
-                               </li>
-                               <li>
-                                   <a href="#">Comics</a>
-                               </li>
-                               <li>
-                                   <a href="#">Movies</a>
-                               </li>
-                               <li>
-                                   <a href="#">TV</a>
-                               </li>
-                               <li>
-                                   <a href="#">Games</a>
-                               </li>
-                               <li>
-                                   <a href="#">Videos</a>
-                               </li>
-                               <li>
-                                   <a href="#">News</a>
-                               </li>
-                               <li id="second-nav">
-                                   <a href="#">SHOP</a>
-                               </li>
-                               <li>
-                                   <a href="#">Shop DC</a>
-                               </li>
-                               <li>
-                                   <a href="#">Shop DC Collectubles</a>
+                               <h3>DC COMICS</h3>
+                               <li v-for="link, i in dcComicsLinks" :key="i">
+                                   <a :href="link.url">{{ link.text }}</a>
                                </li>
                            </ul>
                        </nav>
 
+                       <nav>
+                           <ul>
+                               <h3>SHOP</h3>
+                               <li v-for="link, i in shopLinks" :key="i">
+                                   <a :href="link.url">{{ link.text }}</a>
+                               </li>
+                           </ul>
+                       </nav>
                    </div>
 
                    <div id="dc-nav">
-                       <h3>DC</h3>
                        <nav>
                            <ul>
-                               <li>
-                                   <a href="#">Terms Of Use</a>
-                               </li>
-                               <li>
-                                   <a href="#">Privacy policy (New)</a>
-                               </li>
-                               <li>
-                                   <a href="#">Ad Choices</a>
-                               </li>
-                               <li>
-                                   <a href="#">Advertising</a>
-                               </li>
-                               <li>
-                                   <a href="#">Jobs</a>
-                               </li>
-                               <li>
-                                   <a href="#">Subscriptions</a>
-                               </li>
-                               <li>
-                                   <a href="#">Talent Workshops</a>
-                               </li>
-                               <li>
-                                   <a href="#">CPSC Certificates</a>
-                               </li>
-                               <li>
-                                   <a href="#">Ratings</a>
-                               </li>
-                               <li>
-                                   <a href="#">Shop Help</a>
-                               </li>
-                               <li>
-                                   <a href="#">Contact Us</a>
+                               <h3>DC</h3>
+                               <li v-for="link, i in dcLinks" :key="i">
+                                   <a :href="link.url">{{ link.text }}</a>
                                </li>
                            </ul>
                        </nav>
                    </div>
 
                    <div id="sites-nav">
-                       <h3>SITES</h3>
                        <nav>
                            <ul>
-                               <li>
-                                   <a href="#">DC</a>
-                               </li>
-                               <li>
-                                   <a href="#">MAD Magazine</a>
-                               </li>
-                               <li>
-                                   <a href="#">DC Kids</a>
-                               </li>
-                               <li>
-                                   <a href="#">DC Universe</a>
-                               </li>
-                               <li>
-                                   <a href="#">DC Power Visa</a>
+                               <h3>SITES</h3>
+                               <li v-for="link, i in sitesLinks" :key="i">
+                                   <a :href="link.url">{{ link.text }}</a>
                                </li>
                            </ul>
                        </nav>
@@ -136,20 +75,10 @@
                <div id="social-channels">
                    <span>FOLLOW US</span>
                    <ul id="social-icons">
-                       <li>
-                           <img src="../assets/img/footer-facebook.png" alt="facebook logo">
-                       </li>
-                        <li>
-                           <img src="../assets/img/footer-twitter.png" alt="twitter logo">
-                       </li>
-                        <li>
-                           <img src="../assets/img/footer-youtube.png" alt="youtube logo">
-                       </li>
-                        <li>
-                           <img src="../assets/img/footer-pinterest.png" alt="pinterest logo">
-                       </li>
-                        <li>
-                           <img src="../assets/img/footer-periscope.png" alt="persicope logo">
+                       <li v-for="channel, i in socialMediaChannels" :key="i">
+                           <a :href="channel.url">
+                               <img :src="require(`../assets/img/${channel.image}`)" :alt="channel.alt">
+                           </a>
                        </li>
                    </ul>
                </div>
@@ -185,9 +114,149 @@ export default {
                   image:'buy-dc-power-visa.svg',
                   text:'DC POWER VISA'
               }
+            ],
+
+          dcComicsLinks: [
+              {
+                  url:'#',
+                  text:'Characters'
+              },
+              {
+                  url:'#',
+                  text:'Comics'
+              },
+              {
+                  url:'#',
+                  text:'Movies'
+              },
+              {
+                  url:'#',
+                  text:'TV'
+              },
+              {
+                  url:'#',
+                  text:'Games'
+              },
+              {
+                  url:'#',
+                  text:'Videos'
+              },
+              {
+                  url:'#',
+                  text:'News'
+              }
+          ],
+
+          shopLinks: [
+              {
+                  url: '#',
+                  text:'Shop DC'
+              },
+              {
+                  url: '#',
+                  text: 'Shop DC Collectibles'
+              }
+          ],
+
+          dcLinks: [
+              {
+                  url:'#',
+                  text:'Terms Of Use'
+              },
+              {
+                  url:'#',
+                  text:'Privacy policy (New)'
+              },
+              {
+                  url:'#',
+                  text:'Ad Choices'
+              },
+              {
+                  url:'#',
+                  text:'Advertising'
+              },
+              {
+                  url:'#',
+                  text:'Jobs'
+              },
+              {
+                  url:'#',
+                  text:'Subscriptions'
+              },
+              {
+                  url:'#',
+                  text:'Talent Workshops'
+              },
+              {
+                  url:'#',
+                  text:'CPSC Certificates'
+              },
+              {
+                  url:'#',
+                  text:'Ratings'
+              },
+              {
+                  url:'#',
+                  text:'Shop Help'
+              },
+              {
+                  url:'#',
+                  text:'Contact Us'
+              },
+          ],
+
+           sitesLinks: [
+              {
+                  url:'#',
+                  text:'DC'
+              },
+              {
+                  url:'#',
+                  text:'MAD Magazine'
+              },
+              {
+                  url:'#',
+                  text:'DC Kids'
+              },
+              {
+                  url:'#',
+                  text:'DC Universe'
+              },
+              {
+                  url:'#',
+                  text:'DC Power Visa'
+              }
+          ],
+
+          socialMediaChannels: [
+              {
+                  url: '#',
+                  image: 'footer-facebook.png',
+                  alt: 'facebook logo'
+              },
+              {
+                  url: '#',
+                  image: 'footer-twitter.png',
+                  alt: 'twitter logo'
+              },
+              {
+                  url: '#',
+                  image: 'footer-youtube.png',
+                  alt: 'youtube logo'
+              },
+              {
+                  url: '#',
+                  image: 'footer-pinterest.png',
+                  alt: 'pinterest logo'
+              },
+              {
+                  url: '#',
+                  image: 'footer-periscope.png',
+                  alt: 'periscope logo'
+              }
           ]
       }
-  }
+  },
 }
 </script>
 
@@ -248,27 +317,21 @@ export default {
                 #sites-nav {
                     margin-right: 30px;
                     
-                    h3, #second-nav {
-                            color: white;
-                            font-size: 15px;
-                            margin: 20px 0 15px 0;
-                        }
+                    h3 {
+                        color: white;
+                        font-size: 15px;
+                        margin: 20px 0 15px 0;
+                    }
 
-                        #second-nav a {
-                            color: white;
-                            font-size: 15px;
-                            font-weight: bold;
-                        }
+                    li {
+                        list-style-type: none;
 
-                        li {
-                            list-style-type: none;
-
-                            a {
-                                color: #5c5c5c;
-                                font-size: 10px;
-                                text-decoration: none;
-                            }
+                        a {
+                            color: #5c5c5c;
+                            font-size: 10px;
+                            text-decoration: none;
                         }
+                    }
 
                 }
             }
@@ -299,6 +362,7 @@ export default {
                 padding: 15px;
                 color: white;
                 cursor: pointer;
+                transition: all .8s ease;
 
                 &:hover {
                     background-color: rgba(5,123,232,255);
