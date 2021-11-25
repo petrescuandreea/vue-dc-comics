@@ -9,6 +9,12 @@
             v-for="serie, i in comicSeries" 
             :key="i" 
             :info="serie"/>
+
+            <div class="btn-container" >
+                <div class="btn-load-more">
+                    <h5>load more</h5>
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -107,7 +113,7 @@ export default {
 <style scoped lang="scss">
     section {
         background-color: rgba(28,28,28,255);
-        padding: 40px 0;
+        padding: 20px 0;
 
         #comic-series-list {
             width: 75%;
@@ -115,6 +121,31 @@ export default {
             color: white;
             display: flex;
             flex-wrap: wrap;
+
+            .btn-container {
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+
+                .btn-load-more {
+                    width: 20%;
+                    text-transform: uppercase;
+                    background-color: rgba(2,130,249,255);
+                    padding: 10px 40px;
+                    display: inline-block;
+                    cursor: pointer;
+                    transition: all;
+
+                    &:hover {
+                        background-color: #71ace2;
+                    }
+
+
+                    &:hover h5 {
+                        transform: scale(1.2);
+                    }
+                }
+            }
 
         }
     }
