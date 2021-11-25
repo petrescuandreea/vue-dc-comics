@@ -1,6 +1,9 @@
 <template>
     <section>
         <div id="comic-series-list">
+            <div class="title-wrapper">
+                <h2>current series</h2>
+            </div>
             <!-- componente serie  -->
             <!-- :info => attributo che serve per agganciare le props(proprietà) dichiarate nel componente figlio  -->
             <!-- con il ciclo v-for vado a stampare tanti componenti Comiccard quanti elementi trovo nell'array.
@@ -121,6 +124,15 @@ export default {
             color: white;
             display: flex;
             flex-wrap: wrap;
+            position: relative;
+            
+            .title-wrapper {
+                text-transform: uppercase;
+                padding: 10px 25px;
+                background-color: rgba(2,130,249,255);
+                position: absolute;
+                top: -45px;
+            }
 
             .btn-container {
                 width: 100%;
