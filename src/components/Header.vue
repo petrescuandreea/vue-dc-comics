@@ -104,13 +104,10 @@ export default {
           color: rgba(142,140,142,255);
           font-size: 10px;
           font-weight: bold;
-          padding: 50px 5px;
-          &:hover {
-            background-color: lightblue;
-          }
-            &.active {
-            border-bottom: 4px solid rgba(2,130,249,255);
-            color: rgba(2,130,249,255);
+          padding: 48px 5px;
+          &.active, &:hover {
+              border-bottom: 4px solid rgba(2,130,249,255);
+              color: rgba(2,130,249,255);
           }
         }
       }
