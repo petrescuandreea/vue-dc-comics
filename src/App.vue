@@ -3,6 +3,9 @@
     <!-- componente Header  -->
     <Header/>
 
+    <!-- componente jumbo  -->
+    <Jumbo/>
+    
     <main>
       <!-- componente Conent  -->
       <ComicSeries/>
@@ -17,6 +20,7 @@
 
 <script>
 import Header from './components/Header.vue';
+import Jumbo from './components/Jumbo.vue';
 import ComicSeries from './components/ComicSeries.vue';
 import Footer from './components/Footer.vue';
 
@@ -24,6 +28,7 @@ export default {
   name: 'App',
   components: {
     Header,
+    Jumbo,
     ComicSeries,
     Footer
   }
